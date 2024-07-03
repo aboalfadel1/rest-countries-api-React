@@ -1,9 +1,8 @@
 .father{
     width: 100%;
-
-}
-button {
     margin-top: 100px;
+}
+.link {
     border: none;
     background-color:hsl(0, 0%, 98%);;
     padding: 8px 25px;
@@ -21,8 +20,8 @@ button {
    flex: 1;
 }
 .left img{
-    height: 100%;
-    object-fit: fill;
+    width: 550px;
+    height: 400px;
 }
 .right{
     flex: 1;
@@ -32,13 +31,18 @@ button {
     justify-content: space-between;
 }
 .link{
-    margin-top: 100px;
-    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
     color: black;
     border: none;
     background-color:hsl(0, 0%, 98%);;
-    padding: 5px 25px;
+    padding: 5px 15px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     text-decoration: none;
+    font-size: 0.75rem;
 
+}
+.borderWrapper{
+    display: flex;
+    flex-wrap: wrap;
 }

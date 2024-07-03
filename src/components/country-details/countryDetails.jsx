@@ -20,6 +20,7 @@ export default function CountryDetails() {
       }
       const data = await response.json()
       setCountry(data[0])
+      console.log(data)
       } catch (error) {
         setError(error)
       }
@@ -40,7 +41,7 @@ export default function CountryDetails() {
   return (
    <div className={styles.father}>
     {country.length === 0 ?<p>Country not found</p>: <div>
-            <button><strong>&#8592;</strong> Back</button>
+            <Link to="/" className={styles.link}><strong>&#8592;</strong> Back</Link>
 
     <div className={styles.container }>
       <div className={styles.left}>
@@ -70,11 +71,9 @@ export default function CountryDetails() {
           </div>
         </div>
         <div>
-          <p><b>Border Countries:</b>
-          <Link className={styles.link}>France</Link>
-          <Link className={styles.link}>Germany</Link>
-          <Link className={styles.link}>Nietherland</Link>
-          </p>
+          <p><b>Border Countries:</b></p>
+
+          
         </div>
       </div>
     </div>
