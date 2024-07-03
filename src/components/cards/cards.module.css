@@ -35,4 +35,15 @@
     border: none;
     background-color: #fff;
     padding: 12px;
+    padding-left: 50px;
+    border-radius: 5px;
+  }
+  .inputContainer{
+    position: relative;
+  }
+  .serachIcon{
+    position: absolute;
+    top:25% ;
+    left: 15px;
+    color: rgba(0, 0, 0, 0.3);
   }

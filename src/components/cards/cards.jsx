@@ -2,6 +2,8 @@ import React, { useRef } from 'react'
 import { useState,useEffect } from 'react';
 import styles from "./cards.module.css"
 import Card from '../card/card';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 export default function () {
     const [countries, setCountries] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -81,7 +83,8 @@ export default function () {
   return (
     <>
     <div className={styles.controlContainer}>
-      <div>
+      <div className={styles.inputContainer}>
+      <FontAwesomeIcon icon={faSearch} className={styles.serachIcon}/> {/* Such-Icon */}
         <input onChange={handleSearch} type="text" placeholder='Search for a country...' ref={countryName} />
       </div>
       <select name="select" id="select" ref={selected} className={styles.select} onChange={handelSelect}> 

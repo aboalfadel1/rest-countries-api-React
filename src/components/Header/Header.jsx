@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from "./header.module.css"
-
+import { faMoon as faMoonRegular } from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export default function Header() {
   return (
     <div className={styles.header}>
@@ -8,7 +9,7 @@ export default function Header() {
             <p>Where in the world?</p>
         </div>
         <div className="mode">
-            <p><i></i>Dark Mode</p>
+            <p><FontAwesomeIcon icon={faMoonRegular} /><b> Dark Mode</b></p>
         </div>
     </div>
   )
