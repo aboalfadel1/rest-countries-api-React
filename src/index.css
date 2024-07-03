@@ -1,13 +1,47 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Nunito Sans", sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color:  hsl(0, 0%, 98%);;
+
+}
+:root {
+  --dark-blue-dark-mode-elements: hsl(209, 23%, 22%);
+  --very-dark-blue-dark-mode-background: hsl(207, 26%, 17%);
+  --very-dark-blue-light-mode-text: hsl(200, 15%, 8%);
+  --dark-gray-light-mode-input: hsl(0, 0%, 52%);
+  --very-light-gray-light-mode-background: hsl(0, 0%, 98%);
+  --white-dark-mode-text-light-mode-elements: hsl(0, 0%, 100%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Example usage */
+/* body {
+  background-color: var(--very-light-gray-light-mode-background);
+  color: var(--very-dark-blue-light-mode-text);
+}
+
+.dark-mode {
+  background-color: var(--very-dark-blue-dark-mode-background);
+  color: var(--white-dark-mode-text-light-mode-elements);
+}
+
+input {
+  background-color: var(--dark-gray-light-mode-input);
+}
+
+button {
+  background-color: var(--dark-blue-dark-mode-elements);
+  color: var(--white-dark-mode-text-light-mode-elements);
+} */
+
+.App{
+  padding: 0px 180px;
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.AppDisable{
+  display: block !important;
 }

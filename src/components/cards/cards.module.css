@@ -1,0 +1,38 @@
+.cards{
+    display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.cardLink {
+    text-decoration: none;
+    display: block;
+    color: inherit; /* Inherit color from parent */
+  }
+
+  .controlContainer{
+    display: flex;
+    justify-content: space-between;
+   width: 100%;
+   margin-top: 50px;
+  }
+  .select{
+    background-color: white;
+    border: none;
+    outline: none;
+    width: 20%;
+    padding: 15px 25px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  .select option{
+    border: none;
+    outline: none;
+    background-color: #fff;
+    margin-top: 10px;
+  }
+.controlContainer input{
+    width: 250px;
+    outline: none;
+    border: none;
+    background-color: #fff;
+    padding: 12px;
+  }

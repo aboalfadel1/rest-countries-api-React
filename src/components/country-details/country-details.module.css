@@ -1,0 +1,44 @@
+.father{
+    width: 100%;
+
+}
+button {
+    margin-top: 100px;
+    border: none;
+    background-color:hsl(0, 0%, 98%);;
+    padding: 8px 25px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+.container{
+    justify-content: space-between;
+    display: flex;
+    gap: 100px;
+    margin-top: 50px;
+    
+}
+.left {
+   flex: 1;
+}
+.left img{
+    height: 100%;
+    object-fit: fill;
+}
+.right{
+    flex: 1;
+}
+.colContainer{
+    display: flex;
+    justify-content: space-between;
+}
+.link{
+    margin-top: 100px;
+    margin-left: 10px;
+    color: black;
+    border: none;
+    background-color:hsl(0, 0%, 98%);;
+    padding: 5px 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-decoration: none;
+
+}
