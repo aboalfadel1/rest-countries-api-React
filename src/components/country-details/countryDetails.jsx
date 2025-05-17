@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import styles from "./country-details.module.css"
 import { Link, useParams } from 'react-router-dom'
+import newSyria from "../../imgs/syria.svg.png"
 
 export default function CountryDetails() {
   const {countryDetails}= useParams()
@@ -45,7 +46,7 @@ export default function CountryDetails() {
 
     <div className={styles.container }>
       <div className={styles.left}>
-    	  <img src={country.flags.png}/>
+    	  <img src={country.name.common==="Syria"?newSyria: country.flags.png}/>
 
       </div>
       <div className={styles.right}>
