@@ -72,7 +72,7 @@ export default function CountryDetails() {
           </div>
         </div>
         <div>
-          <p><b>Border Countries:</b></p>
+          <p><b>Border Countries: {country.borders.map(border => `${border}, `)} </b></p>
 
           
         </div>
