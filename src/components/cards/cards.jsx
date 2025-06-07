@@ -56,7 +56,7 @@ export default function () {
       }
       const fetchCountries = async () => {
         try {
-          const response = await fetch('https://restcountries.com/v3.1/all');
+          const response = await fetch('https://restcountries.com/v3.1/all?fields=name,flags,capital,region,subregion,population,tld,currencies,languages,borders');
           if (!response.ok) {
             throw new Error('Network response was not ok');
           }
