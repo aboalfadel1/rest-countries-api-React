@@ -1,14 +1,30 @@
-.header{
+.header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-    padding: 0px 180px;
+    padding: 0 180px;
 }
-.logo{
+
+.logo {
     font-weight: bolder;
     font-size: 2rem;
 }
-.mode{
+
+.mode {
     cursor: pointer;
+}
+
+
+/* Media Query */
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 10px 20px;
+        gap: 15px;
+    }
+    .logo {
+        font-size: 1.5rem;
+    }
 }

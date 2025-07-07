@@ -1,49 +1,73 @@
-.cards{
+.cards {
     display: flex;
-  gap: 50px;
-  flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
 }
+
 .cardLink {
     text-decoration: none;
     display: block;
-    color: inherit; /* Inherit color from parent */
-  }
+    color: inherit;
+}
 
-  .controlContainer{
+.controlContainer {
     display: flex;
     justify-content: space-between;
-   width: 100%;
-   margin-top: 50px;
-  }
-  .select{
+    width: 100%;
+    margin-top: 50px;
+}
+
+.select {
     background-color: white;
     border: none;
     outline: none;
     width: 20%;
     padding: 15px 25px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  }
-  .select option{
+}
+
+.select option {
     border: none;
     outline: none;
     background-color: #fff;
     margin-top: 10px;
-  }
-.controlContainer input{
+}
+
+.controlContainer input {
     width: 250px;
     outline: none;
     border: none;
     background-color: #fff;
-    padding: 12px;
-    padding-left: 50px;
+    padding: 12px 12px 12px 50px;
     border-radius: 5px;
-  }
-  .inputContainer{
+}
+
+.inputContainer {
     position: relative;
-  }
-  .serachIcon{
+}
+
+.serachIcon {
     position: absolute;
-    top:25% ;
+    top: 25%;
     left: 15px;
     color: rgba(0, 0, 0, 0.3);
-  }
+}
+
+
+/* Media Query */
+
+@media (max-width: 768px) {
+    .controlContainer {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .select {
+        width: 100%;
+        padding: 10px 15px;
+    }
+    .controlContainer input {
+        width: 100%;
+        padding-left: 40px;
+    }
+}
