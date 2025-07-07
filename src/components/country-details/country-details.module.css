@@ -1,58 +1,101 @@
 .father {
     width: 100%;
     margin-top: 100px;
+    padding: 0 20px;
 }
+
+
+/* زر الرجوع */
 
 .link {
-    border: none;
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 10px;
+    color: black;
     background-color: hsl(0, 0%, 98%);
-    ;
     padding: 8px 25px;
     border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
+.link:hover {
+    background-color: #f1f1f1;
+    transform: translateY(-1px);
+}
+
+
+/* الحاوية الرئيسية */
+
 .container {
-    justify-content: space-between;
     display: flex;
+    justify-content: space-between;
     gap: 100px;
     margin-top: 50px;
+    flex-wrap: wrap;
 }
+
+
+/* العمود الأيسر للصورة */
 
 .left {
     flex: 1;
 }
 
 .left img {
-    width: 550px;
-    height: 400px;
+    max-width: 100%;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    image-rendering: auto;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.left img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* العمود الأيمن للمعلومات */
 
 .right {
     flex: 1;
 }
 
+
+/* صف الأعمدة داخل المعلومات */
+
 .colContainer {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
-.link {
-    margin-top: 10px;
-    margin-right: 10px;
-    color: black;
-    border: none;
-    background-color: hsl(0, 0%, 98%);
-    ;
-    padding: 5px 15px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    text-decoration: none;
-    font-size: 0.75rem;
+.colContainer>div {
+    flex: 1;
+    min-width: 200px;
 }
 
-.borderWrapper {
+.colContainer p {
+    margin: 8px 0;
+}
+
+
+/* روابط الدول الحدودية */
+
+.borders {
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 8px;
 }
 
 .borderLink {
@@ -72,9 +115,49 @@
     transform: scale(1.05);
 }
 
-.borders {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 8px;
+
+/* الوضع الليلي */
+
+@media (prefers-color-scheme: dark) {
+    .link {
+        background-color: #2c2c2c;
+        color: #fff;
+    }
+    .link:hover {
+        background-color: #3a3a3a;
+    }
+    .left img {
+        background-color: #1e1e1e;
+        box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+    }
+    .left img:hover {
+        box-shadow: 0 8px 25px rgba(255, 255, 255, 0.08);
+    }
+    .borderLink {
+        background-color: #333;
+        color: #fff;
+    }
+    .borderLink:hover {
+        background-color: #444;
+    }
+}
+
+
+/* دعم الشاشات الصغيرة */
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 50px;
+    }
+    .left img {
+        max-height: 300px;
+    }
+    .colContainer {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .colContainer>div {
+        width: 100%;
+    }
 }
