@@ -4,7 +4,7 @@ import styles from "./cards.module.css"
 import Card from '../card/card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-export default function () {
+export default function Cards() {
     const [countries, setCountries] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -16,7 +16,7 @@ export default function () {
       if(typedName){
         try{
           const res = await fetch(`https://restcountries.com/v3.1/name/${typedName}`)
-          if(res.status==404){
+          if(res.status === 404){
             setCountries([])
             return
           }
@@ -43,7 +43,6 @@ export default function () {
           }
           const data = await res.json();
           setCountries(data)
-          console.log(data)
         }catch(error){
           setError(error)
         }finally{
@@ -97,7 +96,7 @@ export default function () {
       </select>
     </div>
     <div className={styles.cards}>
-      {countries.length== 0 ? <p>There are no maches Country</p>:countries.map((country)=><Card flag={country.flags.svg} key={country.name.common} name={country.name.common} population={country.population} region={country.region} capital={country.capital} />)}
+      {countries.length === 0 ? <p>There are no maches Country</p>:countries.map((country)=><Card flag={country.flags.svg} key={country.name.common} name={country.name.common} population={country.population} region={country.region} capital={country.capital} />)}
         {}
     </div>
     </>

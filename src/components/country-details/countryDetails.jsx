@@ -21,7 +21,6 @@ export default function CountryDetails() {
       }
       const data = await response.json()
       setCountry(data[0])
-      console.log(data)
       } catch (error) {
         setError(error)
       }
@@ -31,7 +30,6 @@ export default function CountryDetails() {
     }
     fetchCountry()
   },[countryDetails])
-  console.log(country)
 
     if(error){
       return <div>Error: {error.message}</div>;
@@ -80,7 +78,7 @@ export default function CountryDetails() {
       {country.borders.map((borderCode) => (
         <Link
           key={borderCode}
-          to={`/${borderCode}`}
+          to="#"
           className={styles.borderLink}
         >
           {borderCode}
