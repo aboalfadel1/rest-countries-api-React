@@ -29,7 +29,7 @@ export default function CountryDetails() {
       }
     }
     fetchCountry()
-  },[])
+  },[countryDetails])
   console.log(country)
 
     if(error){
@@ -45,7 +45,7 @@ export default function CountryDetails() {
 
     <div className={styles.container }>
       <div className={styles.left}>
-    	  <img src={country.flags.png}/>
+        <img src={country.flags.png} alt={country.name?.common ? `${country.name.common} flag` : "Country flag"} />
 
       </div>
       <div className={styles.right}>
@@ -57,7 +57,7 @@ export default function CountryDetails() {
             <p>Region: {country.region}</p>
             <p>Sub Reguion: {country.subregion}</p>
             <p>Capital: {country.capital.map((c,index)=> {
-              if(index==country.capital.length-1) return c
+              if(index===country.capital.length-1) return c
               return `${c}, `
             })}</p>
           </div>
@@ -65,7 +65,7 @@ export default function CountryDetails() {
             <p>Top Level Domain: {country.tld.map((t,index) => index===country.tld.length-1 ? t:`${t}, ` )}</p>
             <p>Currencies: {Object.values(country.currencies)[0].name} {Object.values(country.currencies)[0].symbol}</p>
             <p>Langueges: {Object.entries(country.languages).map(([key, value],index) => {
-              if(index==Object.keys(country.languages).length-1 ) return value
+              if(index === Object.keys(country.languages).length-1 ) return value
                 return `${value}, `
             })}</p>
           </div>

@@ -2,7 +2,6 @@ import React from 'react'
 import styles from './card.module.css'
 import { Link } from 'react-router-dom';
 import { useDarkMode } from '../../store/darkMode';
-
 export default function Card({name,population,region,capital,flag}) {
   const {isDarkMode} = useDarkMode()
   return (
