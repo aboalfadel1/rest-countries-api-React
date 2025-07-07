@@ -74,10 +74,23 @@ export default function CountryDetails() {
           </div>
         </div>
         <div>
-          <p><b>Border Countries: {(country.borders) ? country.borders.map((border,index) => index===country.borders.length-1 ? `${border}` :  `${border}, `):"There is no Bordercountry for this Country!"} </b></p>
-
-          
-        </div>
+  <p><b>Border Countries: </b></p>
+  {country.borders ? (
+    <div className={styles.borders}>
+      {country.borders.map((borderCode) => (
+        <Link
+          key={borderCode}
+          to={`/${borderCode}`}
+          className={styles.borderLink}
+        >
+          {borderCode}
+        </Link>
+      ))}
+    </div>
+  ) : (
+    <p>There is no border country for this country!</p>
+  )}
+</div>
       </div>
     </div>
     </div>}
