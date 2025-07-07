@@ -74,7 +74,7 @@ export default function CountryDetails() {
           </div>
         </div>
         <div>
-          <p><b>Border Countries: {country.borders.length>0 ? country.borders.map(border => `${border}, `):"There is no Bordercountry for this Country!"} </b></p>
+          <p><b>Border Countries: {(country.borders.length>0 || country.border) ? country.borders.map(border => `${border}, `):"There is no Bordercountry for this Country!"} </b></p>
 
           
         </div>
