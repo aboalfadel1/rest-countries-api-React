@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import styles from "./country-details.module.css"
 import { Link, useParams } from 'react-router-dom'
+import newSyria from "../../imgs/syria.svg.png"
 
 export default function CountryDetails() {
   const {countryDetails}= useParams()
@@ -44,10 +45,12 @@ export default function CountryDetails() {
             <Link to="/" className={styles.link}><strong>&#8592;</strong> Back</Link>
 
     <div className={styles.container }>
-      <div className={styles.left}>
-        <img src={country.flags.png} alt={country.name?.common ? `${country.name.common} flag` : "Country flag"} />
-
-      </div>
+<div className={styles.left}>
+  <img
+    src={country.name?.common === "Syria" ? newSyria : country.flags?.png}
+    alt={country.name?.common ? `${country.name.common} flag` : "Country flag"}
+  />
+</div>
       <div className={styles.right}>
         <h2>{country.name.common}</h2>
         <div className={styles.colContainer}>
@@ -71,7 +74,7 @@ export default function CountryDetails() {
           </div>
         </div>
         <div>
-          <p><b>Border Countries:</b></p>
+          <p><b>Border Countries: {country.borders.length>0 ? country.borders.map(border => `${border}, `):"There is no Bordercountry for this Country!"} </b></p>
 
           
         </div>
