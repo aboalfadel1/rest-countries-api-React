@@ -78,7 +78,7 @@ export default function CountryDetails() {
       {country.borders.map((borderCode) => (
         <Link
           key={borderCode}
-          to="#"
+          to={`/${country.name}`}
           className={styles.borderLink}
         >
           {borderCode}
