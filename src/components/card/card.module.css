@@ -41,3 +41,15 @@
         margin-top: 30px;
     }
 }
+
+.dark-mode {
+    background-color: #2b3945;
+    color: white;
+}
+
+.textDark {
+    flex: 1;
+    padding: 15px;
+    height: 55%;
+    color: white;
+}
