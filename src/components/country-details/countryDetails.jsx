@@ -67,16 +67,8 @@ export default function CountryDetails() {
           <div className={styles.container}>
             <div className={styles.left}>
               <img
-                src={
-                  country.name?.common === "Syria"
-                    ? newSyria
-                    : country.flags?.png
-                }
-                alt={
-                  country.name?.common
-                    ? `${country.name.common} flag`
-                    : "Country flag"
-                }
+                src={country.flags?.png}
+                alt="Country flag"
               />
             </div>
             <div className={styles.right}>
